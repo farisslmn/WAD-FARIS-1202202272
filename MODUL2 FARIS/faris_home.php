@@ -23,7 +23,7 @@
             <a class="nav-link text-light " href="faris_home.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href="faris_booking.php">Booking</a>
+            <a class="nav-link text-light" href="">Booking</a>
           </li>
 
         </ul>
@@ -56,7 +56,7 @@
             <li class="list-group-item">Automatic</li>
           </ul>
           <div class="card-body text-center">
-            <a href="faris_booking.php" class="btn btn-primary">Book Now</a>
+            <a href="faris_booking.phpf" class="btn btn-primary">Book Now</a>
 
           </div>
 

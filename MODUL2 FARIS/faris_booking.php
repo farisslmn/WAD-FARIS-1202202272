@@ -36,7 +36,7 @@ if(isset($_GET['name'])and isset($_GET['car'])){
         <h2 class="mb-4 text-center">Reservasi kendaraan EAD</h2>
         <div class="row">
             <div class="col-lg-6 align-self-center">
-                <?php if(isset($car)):?>
+                <?php if(isset()):?>
                 <img class="img-fluid" src="<?=$img?>">
                 <?php else:?>
                 <img class="img-fluid" src="alphard.jpg">
