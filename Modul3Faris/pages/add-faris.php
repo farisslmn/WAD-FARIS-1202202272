@@ -72,6 +72,10 @@ if(isset($_POST['submit'])){
                         <label for="deskripsi" class="form-label">Deskripsi</label>
                         <input type="text" class="form-control" id="deskripsi" name="deskripsi">
                     </div>
+                    <div class = "mb-3">
+                      <label for="foto" class="form-label">foto</label>
+                      <input type="file" class="form-control" id="foto" name="foto">
+                    </div>
                     <button type="submit" class="btn btn-primary" name="submit">Submit</button>
                 </form>
         </div>

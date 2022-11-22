@@ -17,7 +17,7 @@ $datacar = showcar("SELECT * FROM tabelfaris");
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
   <!-- My Css -->
-  <link rel="stylesheet" href="../assets/styles/index.css">
+  <link rel="stylesheet" href="../styles/index.css">
 
   <title>Home</title>
 </head>
@@ -56,14 +56,16 @@ $datacar = showcar("SELECT * FROM tabelfaris");
         <?php foreach($datacar as $data):?>
           <div class="col-md-5">
             <div class="card">
-              <img src="../images/freed.jpg" class="card-img-top" alt="...">
+              <img src="../images/<?= $data['foto_mobil']?>" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title"><?= $data['nama_mobil']?></h5>
                 <p class="card-text"><?= $data['deskripsi']?></p>
+                
               </div>
               <div class="card-body">
               <div class="row justify-content-center gap-4">
-                <div class="col-md-5"><button type="button" class="btn btn-primary rounded-pill w-100">Detail</button></div>
+                <!-- <div class="col-md-5">  <button type="button" class="btn btn-primary rounded-pill w-100">Detail</button></div> -->
+                <div class="col-md-5"><a href="../pages/detail-faris.php?id=<?$data['id_mobil']?>"  class= "btn btn-primary rounded-pill w-100">Detail</a></div>
                 <div class="col-md-5"><a href="../config/delete.php?id=<?=$data['id_mobil']?>" class="btn btn-danger rounded-pill w-100">Delete</a></div>
               </div>
               

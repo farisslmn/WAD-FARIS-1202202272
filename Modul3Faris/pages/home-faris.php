@@ -10,7 +10,7 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
   <!-- My Css -->
-  <link rel="stylesheet" href="../assets/styles/index.css">
+  <link rel="stylesheet" href="../styles/index.css">
 
   <title>Home</title>
 </head>
