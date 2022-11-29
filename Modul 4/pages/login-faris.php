@@ -1,6 +1,6 @@
 		<?php
 		$database = mysqli_connect("localhost", "root", "", "wad_modul4_faris", 3306);
-		();
+		session_start();
 		if(isset($_POST["submit"])){
 			$email = $_POST['email'];
 			$password = $_POST['password'];

@@ -2,7 +2,7 @@
     session_start();
     require '../config/connector.php';
 
-    if(isset($['login'])){
+    if(isset($_SESSION['login'])){
       $idprofile = $_SESSION["id"];
       $dataUser = profile($_SESSION['id'])[0];
     }
