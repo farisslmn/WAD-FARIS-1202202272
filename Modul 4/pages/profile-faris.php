@@ -71,8 +71,53 @@ if(isset($_SESSION['login'])){
   <main>
     <div class="container mt-5">
       <div class="judul">
-        <h2>Profil</h2>
-        <p>Mohon maaf bang bilan aman saya tidak bisa menyelesaikan kodingan ini bang, karana keterbatasannya waktu dan ilmu yang saya miliki bang, mohon maaf banggg
-        </p>
+        <h3>Profil</h3>
+      
       </div>
+   <main>
+    <div class="container mt-5">
+      <div class="header">
+        <div class="col-lg-6 align-self-center">
+        </div>
+         </div>
+            <div class="row">
+            <div class="col-lg-6">
+            <form action="" method="POST">
+                <div class="mb-3">
+                    <label for="email" class="form-label">email</label>
+                    <input type="text" class="form-control" id="email" name="email" value="<?= $data['email_pemilik'] ?>" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="pemiliki" class="form-label">Nama Pemilik</label>
+                    <input type="text" class="form-control" id="pemilik" name="pemilik" value="<?= $data['pemilik_mobil'] ?>" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="merk" class="form-label">Merk</label>
+                    <input type="text" class="form-control" id="merk" name="merk" value="<?= $data['merk_mobil'] ?>" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="tanggal" class="form-label">Tanggal Beli</label>
+                    <input type="date" class="form-control" id="tanggal" name="tanggal" value="<?= $data['tanggal_beli'] ?>" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="deskripsi" class="form-label">Deskripsi</label>
+                    <input type="text" class="form-control" id="deskripsi" name="deskripsi" value="<?= $data['deskripsi'] ?>" readonly>
+                </div>
+                <div class = "mb-3 d-flex flex-column">
+                  <label for="foto" class="form-label">foto</label>
+                  <span class='d-flex'>
+                    <button class="btn btn-secondary" style="width: 10pc;">
+                      Choose File
+                    </button>
+                    <input type="text" class="form-control" id="foto" name="foto" value="" disabled>
+                  </span>
+                </div>
+
+                <a href="./edit-faris.php?id=<?= $data['id_mobil'] ?>" class="btn btn-primary" name="submit">Update</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
