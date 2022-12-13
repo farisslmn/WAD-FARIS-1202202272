@@ -16,22 +16,31 @@
           </ul>
         </div>
 
-          {{-- <a href="login-faris.php" class="text-white text-decoration-none">Login</a> --}}
+        @auth
+        <div class="d-flex gap-4">
+          <a href="/mycar/create" class="btn btn-light">add car</a>
+          <div class="dropdown">
+            <a class="btn btn-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              faris
+            </a>
+
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="profile-faris.php">Profile</a></li>
+              <form action="/logout" method="post">
+              @csrf
+                <li><button class="dropdown-item" type="submit">Logout</button></li>
+              </form>
+            </ul>
+          </div>
+        </div>
+        @endauth
+
+        @guest
+        <a href="/login" class="text-white text-decoration-none">Login</a>
+        @endguest
 
     
-          <div class="d-flex gap-4">
-            <a href="/mycar/create" class="btn btn-light">add car</a>
-            <div class="dropdown">
-              <a class="btn btn-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                faris
-              </a>
-
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="profile-faris.php">Profile</a></li>
-                <li><a class="dropdown-item" href="../config/logout.php">Logout</a></li>
-              </ul>
-            </div>
-          </div>
+          
         
       </div>
     </nav>

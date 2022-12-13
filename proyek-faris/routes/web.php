@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ShowroomsController;
 use Database\Seeders\ShowroomsSeeder;
 use Illuminate\Support\Facades\Route;
@@ -18,5 +20,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
-route::resource("/mycar",ShowroomsController::class);
+route::resource("/mycar",ShowroomsController::class)->middleware('auth');
+
+route::get('/login', [LoginController::class,'index'])->name('login')->middleware('guest');
+route::post('/login', [LoginController::class,'login']);
+route::post('/logout', [LoginController::class,'logout']);
+
+route::get('/register',[RegisterController::class,'index'])->middleware('guest');
+route::post('/register',[RegisterController::class,'store']);
 
